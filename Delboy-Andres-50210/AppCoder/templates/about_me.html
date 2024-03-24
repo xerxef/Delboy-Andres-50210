@@ -1,0 +1,28 @@
+{% extends 'padre.html' %}
+{% load static %}
+{% block pagina %}Acerca de Mi{% endblock %}
+
+{% block contenido %}
+
+<center>
+    <h1>Hola, soy Andrés Delboy</h1>
+    <p><br /></p>
+    <p><img src="{% static 'assets/img/yo.jpg' %}" alt="..." style="max-width:300px;"/></p>
+    <br />
+    <h2>Introducción</h2>
+    <p>Soy programador full stack, tengo 30 años y soy de Lima, Perú.</p>
+    <p>Llevo programando mucho tiempo, empecé cuando estaba en el colegio, me gustó le agarré el gusto a la programación cuando me enseñaron a utilizar VB6 en la secundaria y desde entonces solo busco seguir aprendiendo</p>
+    <br />
+    <h2>Experiencia Laboral</h2>
+    <p>En el rubro que más he participado es en el desarrollo de sistemas de venta y cobranza, pero también tengo experiencia en soluciones empresariales como ERP y también en desarrollo de videojuegos.</p>
+    <br />
+    <h2>Lenguajes de programación favoritos</h2>
+    <p>De momento diría que mi favorito es JavaScript, he estado aprendiendo un poco más de front utilizando React. Otro lenguaje en el que me gusta mucho programar es en C#.</p>
+    <br />
+    <h2>Hobbies</h2>
+    <p>Dentro de mis hobbies se encuentra el jugar videojuegos. Me encantan los juegos de tipo RPG y Metroidvania.<br />También me gusta mucho leer manga y mirar anime.
+    </p>
+
+</center>
+
+{% endblock %}

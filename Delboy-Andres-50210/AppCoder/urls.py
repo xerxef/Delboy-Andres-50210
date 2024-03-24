@@ -20,6 +20,9 @@ urlpatterns = [
     # Avatar
     path('editar_avatar/', agregarAvatar, name='EditarAvatar'),
 
+    # Acerca de mi
+    path('about_me/', aboutMe, name='AboutMe'),
+
     # Inicio
     path('', inicio, name='Inicio'),
     

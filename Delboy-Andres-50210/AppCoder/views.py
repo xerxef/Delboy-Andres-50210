@@ -67,6 +67,9 @@ def inicio(request):
     else:
         return render(request, 'padre.html')
     
+def aboutMe(request):
+    return render(request, 'about_me.html')
+    
 @login_required
 def agregarAvatar(request):
     if request.method == 'POST':
