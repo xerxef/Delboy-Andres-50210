@@ -1,0 +1,14 @@
+{% extends 'padre.html' %}
+{% load static %}
+{% block pagina %}Inicio{% endblock %}
+
+{% block contenido %}
+<div style="text-align: center;">
+    <form action="" method="post">{% csrf_token %}
+        {{formulario.as_p}}
+        <br />
+        <button type="submit">Iniciar Sesion</button>
+    </form>
+</div>
+
+{% endblock %}

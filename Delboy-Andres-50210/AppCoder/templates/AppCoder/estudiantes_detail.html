@@ -1,0 +1,14 @@
+{% extends 'padre.html' %}
+{% load static %}
+{% block pagina %}Ver Estudiantes{% endblock %}
+
+{% block contenido %}
+<div class="col-md-6 col-lg-4 mb-5">
+    <p>Nombre: {{estudiantes.nombre}}</p>
+    <p>Apellido: {{estudiantes.apellido}}</p>
+    <p>eMail: {{estudiantes.email}}</p>
+    <p>Edad: {{estudiantes.edad}}</p>
+    <br />
+    <a class="btn btn-primary" href="{% url 'EstudianteLeer' %}">Volver</a>
+</div>
+{% endblock %}

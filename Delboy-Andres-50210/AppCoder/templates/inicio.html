@@ -1,0 +1,46 @@
+{% extends 'padre.html' %}
+{% load static %}
+{% block pagina %}Inicio{% endblock %}
+
+{% block contenido %}
+<div class="col-md-6 col-lg-4 mb-5">
+    <div class="portfolio-item mx-auto">
+        <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+            <div class="portfolio-item-caption-content text-center text-white"><a style="text-decoration: none; color: white; font-weight: bold;" href="/estudiantes/">CREAR ESTUDIANTES</a></div>
+        </div>
+        <img class="img-fluid" src="{% static 'assets/img/portfolio/cabin.png' %}" alt="..." />
+    </div>
+</div>
+<div class="col-md-6 col-lg-4 mb-5">
+    <div class="portfolio-item mx-auto">
+        <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+            <div class="portfolio-item-caption-content text-center text-white"><a style="text-decoration: none; color: white; font-weight: bold;" href="/curso/">CREAR CURSOS</a></div>
+        </div>
+        <img class="img-fluid" src="{% static 'assets/img/portfolio/game.png' %}" alt="..." />
+    </div>
+</div>
+<div class="col-md-6 col-lg-4 mb-5">
+    <div class="portfolio-item mx-auto">
+        <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+            <div class="portfolio-item-caption-content text-center text-white"><a style="text-decoration: none; color: white; font-weight: bold;" href="/profesor/">CREAR PROFESORES</a></div>
+        </div>
+        <img class="img-fluid" src="{% static 'assets/img/portfolio/safe.png' %}" alt="..." />
+    </div>
+</div>
+<div class="col-md-6 col-lg-4 mb-5">
+    <div class="portfolio-item mx-auto">
+        <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+            <div class="portfolio-item-caption-content text-center text-white"><a style="text-decoration: none; color: white; font-weight: bold;" href="/camada/">CREAR CAMADA</a></div>
+        </div>
+        <img class="img-fluid" src="{% static 'assets/img/portfolio/circus.png' %}" alt="..." />
+    </div>
+</div>
+<div class="col-md-6 col-lg-4 mb-5">
+    <div class="portfolio-item mx-auto">
+        <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+            <div class="portfolio-item-caption-content text-center text-white"><a style="text-decoration: none; color: white; font-weight: bold;" href="/buscar/">BUSCAR</a></div>
+        </div>
+        <img class="img-fluid" src="{% static 'assets/img/portfolio/submarine.png' %}" alt="..." />
+    </div>
+</div>
+{% endblock %}

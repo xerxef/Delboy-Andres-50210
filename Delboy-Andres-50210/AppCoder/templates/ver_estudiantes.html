@@ -1,0 +1,28 @@
+{% extends 'padre.html' %}
+{% load static %}
+{% block pagina %}Ver Estudiante{% endblock %}
+
+{% block contenido %}
+<div class="col-md-6 col-lg-4 mb-5">
+    <form action="/ver_estudiantes/" method="get">
+        <p>
+            <label for="nombre">Nombre: </label>
+            <input type="text" name="nombre">
+            <br />
+            <label for="apellido">apellido: </label>
+            <input type="text" name="apellido">
+            <br />
+            <input type="submit" value="Buscar">&nbsp;<a href="{% url 'EstudianteLeer' %}"><button type="button">Buscar Todos</button></a>
+        </p>
+    </form>
+    <p>{{mensaje}}</p>
+    
+    {% for estudiante in resultados %}
+        <p>Nombre Completo: {{estudiante.nombre}} {{estudiante.apellido}}</p>
+        <p>Mail: {{estudiante.email}}</p>
+        <p>Edad: {{estudiante.edad}} años</p>
+        <br />
+        <a class="btn btn-danger" href="{% url 'eliminarEstudiantes' estudiante.nombre estudiante.apellido %}">ELIMINAR</a>&nbsp;<a class="btn btn-primary" href="{% url 'editarEstudiantes' estudiante.nombre estudiante.apellido %}">EDITAR</a>
+    {% endfor %}
+</div>
+{% endblock %}

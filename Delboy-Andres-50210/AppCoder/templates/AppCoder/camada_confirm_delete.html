@@ -1,0 +1,15 @@
+{% extends 'padre.html' %}
+{% load static %}
+{% block pagina %}Eliminar Camada{% endblock %}
+
+{% block contenido %}
+<div class="col-md-6 col-lg-4 mb-5">
+    <form action="" method="post"> {% csrf_token %}
+        <p>¿Estás seguro de querer eliminar esta camada?</p>
+        <br />
+        <input type="submit" value="Eliminar">
+    </form>
+    <br />
+    <a class="btn btn-primary" href="{% url 'CamadaLeer' %}">Volver</a>
+</div>
+{% endblock %}

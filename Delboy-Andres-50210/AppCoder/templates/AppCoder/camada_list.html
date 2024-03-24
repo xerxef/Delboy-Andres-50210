@@ -1,0 +1,20 @@
+{% extends 'padre.html' %}
+{% load static %}
+{% block pagina %}Ver CAMADAs{% endblock %}
+
+{% block contenido %}
+<div class="col-md-6 col-lg-4 mb-5">
+    <h2>Lista de Camadas:</h2>
+    
+    {% for camada in object_list %}
+        <p>Número: {{camada.numero}}</p>
+        <p>
+            <a class="btn btn-primary" href="{% url 'CamadaDetalle' camada.id %}">VER CAMADA</a>&nbsp;
+            <a class="btn btn-secondary" href="{% url 'CamadaEditar' camada.id %}">EDITAR CAMADA</a>&nbsp;
+            <a class="btn btn-danger" href="{% url 'CamadaEliminar' camada.id %}">ELIMINAR</a>
+        </p>
+        <br />
+    {% endfor %}
+    <p><a class="btn btn-success" href="{% url 'CamadaCrear' %}">CREAR CAMADA</a></p>
+</div>
+{% endblock %}

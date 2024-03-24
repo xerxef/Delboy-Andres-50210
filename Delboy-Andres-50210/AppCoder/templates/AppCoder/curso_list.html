@@ -1,0 +1,20 @@
+{% extends 'padre.html' %}
+{% load static %}
+{% block pagina %}Ver Cursos{% endblock %}
+
+{% block contenido %}
+<div class="col-md-6 col-lg-4 mb-5">
+    <h2>Lista de Cursos:</h2>
+    
+    {% for curso in object_list %}
+        <p>Nombre: {{curso.nombre}}</p>
+        <p>
+            <a class="btn btn-primary" href="{% url 'CursoDetalle' curso.id %}">VER CURSO</a>&nbsp;
+            <a class="btn btn-secondary" href="{% url 'CursoEditar' curso.id %}">EDITAR CURSO</a>&nbsp;
+            <a class="btn btn-danger" href="{% url 'CursoEliminar' curso.id %}">ELIMINAR</a>
+        </p>
+        <br />
+    {% endfor %}
+    <p><a class="btn btn-success" href="{% url 'CursoCrear' %}">CREAR CURSO</a></p>
+</div>
+{% endblock %}

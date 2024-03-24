@@ -1,0 +1,20 @@
+{% extends 'padre.html' %}
+{% load static %}
+{% block pagina %}Ver Profesores{% endblock %}
+
+{% block contenido %}
+<div class="col-md-6 col-lg-4 mb-5">
+    <h2>Lista de Profesores:</h2>
+    
+    {% for profesor in object_list %}
+        <p>Nombre: {{profesor.nombre}} {{profesor.apellido}}</p>
+        <p>
+            <a class="btn btn-primary" href="{% url 'ProfesorDetalle' profesor.id %}">VER PROFESOR</a>&nbsp;
+            <a class="btn btn-secondary" href="{% url 'ProfesorEditar' profesor.id %}">EDITAR PROFESOR</a>&nbsp;
+            <a class="btn btn-danger" href="{% url 'ProfesorEliminar' profesor.id %}">ELIMINAR</a>
+        </p>
+        <br />
+    {% endfor %}
+    <p><a class="btn btn-success" href="{% url 'ProfesorCrear' %}">CREAR PROFESOR</a></p>
+</div>
+{% endblock %}

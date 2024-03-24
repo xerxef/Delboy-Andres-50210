@@ -1,0 +1,24 @@
+{% extends 'padre.html' %}
+{% load static %}
+{% block pagina %}Ver Cursos{% endblock %}
+
+{% block contenido %}
+<div class="col-md-6 col-lg-4 mb-5">
+    <form action="/ver_cursos/" method="get">
+        <p>
+            <label for="nombre">Nombre del Curso: </label>
+            <input type="text" name="nombre">
+            <br />
+            <input type="submit" value="Buscar">&nbsp;<a href="{% url 'CursosLeer' %}"><button type="button">Buscar Todos</button></a>
+        </p>
+    </form>
+    <p>{{mensaje}}</p>
+    
+    {% for curso in resultados %}
+        <p>Nombre: {{curso.nombre}}</p>
+        <p>Camada: {{curso.camada}}</p>
+        <br />
+        <a class="btn btn-danger" href="{% url 'eliminarCursos' curso.nombre %}">ELIMINAR</a>&nbsp;<a class="btn btn-primary" href="{% url 'editarCursos' curso.nombre %}">EDITAR</a>
+    {% endfor %}
+</div>
+{% endblock %}

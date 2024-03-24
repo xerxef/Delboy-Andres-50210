@@ -1,0 +1,25 @@
+{% extends 'padre.html' %}
+{% load static %}
+{% block pagina %}Ver Camadas{% endblock %}
+
+{% block contenido %}
+<div class="col-md-6 col-lg-4 mb-5">
+    <form action="/ver_camadas/" method="get">
+        <p>
+            <label for="numero">Número de la camada: </label>
+            <input type="text" name="numero">
+            <br />
+            <input type="submit" value="Buscar">&nbsp;<a href="{% url 'CamadaLeer' %}"><button type="button">Buscar Todos</button></a>
+        </p>
+    </form>
+    <p>{{mensaje}}</p>
+    
+    {% for camada in resultados %}
+        <p>Numero: {{camada.numero}}</p>
+        <p>Profesor: {{camada.profesor}}</p>
+        <p>Cantidad de Alumnos: {{camada.cantidad_alumnos}}</p>
+        <br />
+        <a class="btn btn-danger" href="{% url 'eliminarCamada' camada.numero %}">ELIMINAR</a>&nbsp;<a class="btn btn-primary" href="{% url 'editarCamadas' camada.numero %}">EDITAR</a>
+    {% endfor %}
+</div>
+{% endblock %}

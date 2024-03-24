@@ -1,0 +1,14 @@
+{% extends 'padre.html' %}
+{% load static %}
+{% block pagina %}Inicio{% endblock %}
+
+{% block contenido %}
+<div class="h-100 d-flex align-items-center justify-content-center">
+    <form action="" method="post">{% csrf_token %}
+        {{formulario.as_p}}
+        <br />
+        <button type="submit">Registrar Usuario</button>
+    </form>
+</div>
+
+{% endblock %}

@@ -1,0 +1,38 @@
+{% extends 'padre.html' %}
+{% load static %}
+{% block pagina %}MODULO DE BUSQUEDAS{% endblock %}
+
+{% block contenido %}
+<div class="col-md-6 col-lg-4 mb-5">
+    <div class="portfolio-item mx-auto">
+        <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+            <div class="portfolio-item-caption-content text-center text-white"><a style="text-decoration: none; color: white; font-weight: bold;" href="/ver_estudiantes/">VER ESTUDIANTES</a></div>
+        </div>
+        <img class="img-fluid" src="{% static 'assets/img/portfolio/safe.png' %}" alt="..." />
+    </div>
+</div>
+<div class="col-md-6 col-lg-4 mb-5">
+    <div class="portfolio-item mx-auto">
+        <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+            <div class="portfolio-item-caption-content text-center text-white"><a style="text-decoration: none; color: white; font-weight: bold;" href="/ver_cursos/">VER CURSOS</a></div>
+        </div>
+        <img class="img-fluid" src="{% static 'assets/img/portfolio/submarine.png' %}" alt="..." />
+    </div>
+</div>
+<div class="col-md-6 col-lg-4 mb-5">
+    <div class="portfolio-item mx-auto">
+        <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+            <div class="portfolio-item-caption-content text-center text-white"><a style="text-decoration: none; color: white; font-weight: bold;" href="/ver_profesores/">VER PROFESORES</a></div>
+        </div>
+        <img class="img-fluid" src="{% static 'assets/img/portfolio/cabin.png' %}" alt="..." />
+    </div>
+</div>
+<div class="col-md-6 col-lg-4 mb-5">
+    <div class="portfolio-item mx-auto">
+        <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+            <div class="portfolio-item-caption-content text-center text-white"><a style="text-decoration: none; color: white; font-weight: bold;" href="/ver_camadas/">VER CAMADA</a></div>
+        </div>
+        <img class="img-fluid" src="{% static 'assets/img/portfolio/game.png' %}" alt="..." />
+    </div>
+</div>
+{% endblock %}

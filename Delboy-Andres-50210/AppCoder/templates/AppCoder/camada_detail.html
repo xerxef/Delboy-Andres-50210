@@ -1,0 +1,13 @@
+{% extends 'padre.html' %}
+{% load static %}
+{% block pagina %}Ver Camada{% endblock %}
+
+{% block contenido %}
+<div class="col-md-6 col-lg-4 mb-5">
+    <p>Numero: {{camada.numero}}</p>
+    <p>Profesor: {{camada.profesor}}</p>
+    <p>Cantidad de Alumnos: {{camada.cantidad_alumnos}}</p>
+    <br />
+    <a class="btn btn-primary" href="{% url 'CamadaLeer' %}">Volver</a>
+</div>
+{% endblock %}
